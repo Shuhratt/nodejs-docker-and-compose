@@ -6,4 +6,14 @@
 
 ### Backend - https://api.kupdar.nomorepartiessbs.ru
 
-`docker-compose up` - запуск всех образов
+```bash
+# запуск всех образов
+$ docker-compose up
+
+# зайти в консоль контейнера
+$ docker-compose exec {container} sh
+
+# пересобрать конкретный образ и запустить контейнер
+$ docker-compose up --build -d {image}
+
+```
