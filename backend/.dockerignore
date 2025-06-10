@@ -1,5 +1,5 @@
 # Deps
-node_modules/
+node_modules
 
 # Docker
 Dockerfile
@@ -10,8 +10,8 @@ README.md
 LICENSE
 
 # Dist
-dist/
-build/
+dist
+build
 
 # IDE Files
 .idea/

@@ -14,9 +14,8 @@ FROM base AS production
 COPY package*.json ./
 RUN npm ci --omit=dev && npm cache clean --force
 RUN npm i -g pm2
-COPY --from=build /kupdar/dist/ ./
-ENTRYPOINT ["pm2-runtime", "start", "main.js"]
-
+COPY --from=build /kupdar/dist .
+EXPOSE 3000
 
 
 
