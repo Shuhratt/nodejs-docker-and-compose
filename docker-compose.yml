@@ -23,7 +23,7 @@ services:
     env_file:
       - ./backend/env/.env.deploy
     ports:
-      - "5432:5432"
+      - "5433:5433"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
