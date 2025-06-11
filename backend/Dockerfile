@@ -6,8 +6,8 @@ WORKDIR /kupdar
 FROM base AS build
 COPY package*.json ./
 COPY tsconfig*.json nest-cli.json ./
-COPY ./src ./src
 RUN npm ci --ignore-scripts
+COPY ./src ./src
 RUN npm run build
 
 FROM base AS production
